@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomepageController!{% endblock %}
+{% block title %}PathAdmin{% endblock %}
 
 {% block body %}
 <style>
@@ -9,8 +9,17 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
+    {% if app.user %}
+    <h1>Hello {{ app.user.username }}! 😎</h1>
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% else %}
+    <h1>Hello 🥴</h1>
+        <div class="mb-3">
+            You are not logged in, please <a href="{{ path('app_register') }}">Register</a> or <a href="{{ path('app_login') }}">Login</a>
+        </div>
+    {% endif %}
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href="{{ '/srv/app/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>

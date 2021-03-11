@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ClientRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=ClientRepository::class)
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class Client implements UserInterface
 {
@@ -33,6 +35,11 @@ class Client implements UserInterface
      * @ORM\Column(type="string")
      */
     private $password;
+
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $bornAt;
 
     public function getId(): ?int
     {
@@ -113,5 +120,17 @@ class Client implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getBornAt(): ?\DateTimeInterface
+    {
+        return $this->bornAt;
+    }
+
+    public function setBornAt(?\DateTimeInterface $bornAt): self
+    {
+        $this->bornAt = $bornAt;
+
+        return $this;
     }
 }
