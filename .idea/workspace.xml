@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28b7c6d2-64fa-4000-aadd-eb0231755847" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210311222808.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ClientSecurityController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/HomepageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ClientRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/ClientAuthenticator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/homepage/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,6 +156,8 @@
       <workItem from="1615504206432" duration="1759000" />
       <workItem from="1615505998274" duration="420000" />
       <workItem from="1615506451737" duration="142000" />
+      <workItem from="1616689433599" duration="1153000" />
+      <workItem from="1616691704281" duration="724000" />
     </task>
     <servers />
   </component>
